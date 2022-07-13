@@ -1,0 +1,27 @@
+INFO     root:conftest.py:7 login_as_***()
+DEBUG    root:conftest.py:9 Login payload: {'username': '***', 'password': '***'}
+DEBUG    urllib3.connectionpool:connectionpool.py:228 Starting new HTTP connection (1): 127.0.0.1:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://127.0.0.1:8080 "POST /auth/login HTTP/1.1" 200 285
+INFO     root:test_comments.py:11 test_get_all_comments
+INFO     root:comments.py:11 get_all_comments
+INFO     root:utils.py:4 build_request_headers
+INFO     root:utils.py:12 Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json'}
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://127.0.0.1:8080 "GET /comments HTTP/1.1" 307 None
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://127.0.0.1:8080 "GET /comments/ HTTP/1.1" 200 767
+DEBUG    root:test_comments.py:13 [{'id': 1, 'comment_text': 'First Comment', 'likes': 0}, {'id': 2, 'comment_text': 'lastone', 'likes': 0}, {'id': 3, 'comment_text': 'first post', 'likes': 0}, {'id': 4, 'comment_text': 'first post', 'likes': 0}, {'id': 5, 'comment_text': 'Updated comment', 'likes': 123}, {'id': 6, 'comment_text': 'first post', 'likes': 0}, {'id': 7, 'comment_text': 'first post', 'likes': 0}, {'id': 8, 'comment_text': 'first post', 'likes': 0}, {'id': 9, 'comment_text': 'first post', 'likes': 0}, {'id': 10, 'comment_text': 'first post', 'likes': 0}, {'id': 11, 'comment_text': 'first post', 'likes': 0}, {'id': 12, 'comment_text': 'first post', 'likes': 0}, {'id': 13, 'comment_text': 'first post', 'likes': 0}, {'id': 14, 'comment_text': 'first post', 'likes': 0}, {'id': 15, 'comment_text': 'first post', 'likes': 0}, {'id': 16, 'comment_text': 'first post', 'likes': 0}]
+INFO     root:test_comments.py:18 test_cud_comment
+INFO     root:test_comments.py:19 Creating comment
+INFO     root:comments.py:17 create_comment
+INFO     root:utils.py:4 build_request_headers
+INFO     root:utils.py:12 Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json'}
+INFO     root:comments.py:20 Payload for the create request : {'text': 'first post'}
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://127.0.0.1:8080 "POST /comments/?text=first+post HTTP/1.1" 201 47
+INFO     root:test_comments.py:24 {'id': 17, 'comment_text': 'first post', 'likes': 0}
+INFO     root:test_comments.py:27 Updating the comment with comment id : 17
+INFO     root:comments.py:25 update_comment
+INFO     root:utils.py:4 build_request_headers
+INFO     root:utils.py:12 Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json', 'Content-Type': 'application/json'}
+INFO     root:comments.py:33 Request payload : {'comment_text': 'Updated to second one', 'likes': 700}
+DEBUG    urllib3.connectionpool:connectionpool.py:273 Resetting dropped connection: 127.0.0.1
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://127.0.0.1:8080 "POST /comments/17 HTTP/1.1" 405 31
+DEBUG    charset_normalizer:api.py:451 Encoding detection: ascii is most likely the one.

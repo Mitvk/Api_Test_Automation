@@ -20,3 +20,16 @@ class Comments:
         LOG.info(f"Payload for the create request : {payload}")
         response = SESSION.post(f"{app_url}{self.comment_url}/", headers=request_headers, params=payload)
         return response
+
+    def update_comment(self, app_url, access_token, comment_id, **kwargs):
+        LOG.info('update_comment')
+        request_header = build_request_headers(access_token, content_type="application/json")
+        payload = {}
+        if "message" in kwargs:
+            payload["comment_text"] = kwargs["message"]
+        if "likes" in kwargs:
+            payload["likes"] = kwargs["likes"]
+
+        LOG.info(f"Request payload : {payload}")
+        response = SESSION.put(f"{app_url}{self.comment_url}/{comment_id}", headers=request_header, json=payload)
+        return response

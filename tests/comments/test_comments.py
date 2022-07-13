@@ -25,4 +25,9 @@ def test_cud_comment(login_as_admin):
     assert response_data['comment_text'] == "first post"
 
     LOG.info(f'Updating the comment with comment id : {comment_id}')
-
+    response = Comments().update_comment(APP_URL, login_as_admin, comment_id, message='Updated to second one', likes=700)
+    assert response.ok
+    response_data = response.json()
+    LOG.info(f"Response payload : {response_data}")
+    assert response_data['comment_text'] == "Updated to second one"
+    assert response_data["likes"] == 700
