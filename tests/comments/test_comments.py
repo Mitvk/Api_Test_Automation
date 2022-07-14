@@ -31,3 +31,10 @@ def test_cud_comment(login_as_admin):
     LOG.info(f"Response payload : {response_data}")
     assert response_data['comment_text'] == "Updated to second one"
     assert response_data["likes"] == 700
+
+    LOG.info(f"Deleting the comment - {comment_id}")
+    response = Comments().delete_comment(APP_URL, login_as_admin, comment_id)
+    assert response.ok
+    response_data = response.json()
+    LOG.info(f'Delete comment : {response_data}')
+    assert response_data["detail"] == f"Deleted comment {comment_id}"

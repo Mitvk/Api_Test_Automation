@@ -33,3 +33,9 @@ class Comments:
         LOG.info(f"Request payload : {payload}")
         response = SESSION.put(f"{app_url}{self.comment_url}/{comment_id}", headers=request_header, json=payload)
         return response
+
+    def delete_comment(self, app_url, access_token, comment_id):
+        LOG.info('delete_comment')
+        request_header = build_request_headers(access_token)
+        response = SESSION.delete(f"{app_url}{self.comment_url}/{comment_id}", headers=request_header)
+        return response

@@ -1,28 +1,34 @@
-2022-07-13 19:17:35 INFO 35984 conftest.py login_as_***()
-2022-07-13 19:17:35 DEBUG 35984 conftest.py Login payload: {'username': '***', 'password': '***'}
-2022-07-13 19:17:35 DEBUG 35984 connectionpool.py Starting new HTTP connection (1): 127.0.0.1:8080
-2022-07-13 19:17:35 DEBUG 35984 connectionpool.py http://127.0.0.1:8080 "POST /auth/login HTTP/1.1" 200 285
-2022-07-13 19:17:35 INFO 35984 test_comments.py test_get_all_comments
-2022-07-13 19:17:35 INFO 35984 comments.py get_all_comments
-2022-07-13 19:17:35 INFO 35984 utils.py build_request_headers
-2022-07-13 19:17:35 INFO 35984 utils.py Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json'}
-2022-07-13 19:17:35 DEBUG 35984 connectionpool.py http://127.0.0.1:8080 "GET /comments HTTP/1.1" 307 None
-2022-07-13 19:17:35 DEBUG 35984 connectionpool.py http://127.0.0.1:8080 "GET /comments/ HTTP/1.1" 200 933
-2022-07-13 19:17:35 DEBUG 35984 test_comments.py [{'id': 1, 'comment_text': 'First Comment', 'likes': 0}, {'id': 2, 'comment_text': 'lastone', 'likes': 0}, {'id': 3, 'comment_text': 'first post', 'likes': 0}, {'id': 4, 'comment_text': 'first post', 'likes': 0}, {'id': 5, 'comment_text': 'Updated comment', 'likes': 123}, {'id': 6, 'comment_text': 'first post', 'likes': 0}, {'id': 7, 'comment_text': 'first post', 'likes': 0}, {'id': 8, 'comment_text': 'first post', 'likes': 0}, {'id': 9, 'comment_text': 'first post', 'likes': 0}, {'id': 10, 'comment_text': 'first post', 'likes': 0}, {'id': 11, 'comment_text': 'Updated comment', 'likes': 123}, {'id': 12, 'comment_text': 'first post', 'likes': 0}, {'id': 13, 'comment_text': 'first post', 'likes': 0}, {'id': 14, 'comment_text': 'first post', 'likes': 0}, {'id': 15, 'comment_text': 'first post', 'likes': 0}, {'id': 16, 'comment_text': 'first post', 'likes': 0}, {'id': 17, 'comment_text': 'first post', 'likes': 0}, {'id': 18, 'comment_text': 'New Comment2', 'likes': 0}, {'id': 19, 'comment_text': 'Updated to second one', 'likes': 700}]
-2022-07-13 19:17:35 INFO 35984 test_comments.py test_cud_comment
-2022-07-13 19:17:35 INFO 35984 test_comments.py Creating comment
-2022-07-13 19:17:35 INFO 35984 comments.py create_comment
-2022-07-13 19:17:35 INFO 35984 utils.py build_request_headers
-2022-07-13 19:17:35 INFO 35984 utils.py Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json'}
-2022-07-13 19:17:35 INFO 35984 comments.py Payload for the create request : {'text': 'first post'}
-2022-07-13 19:17:35 DEBUG 35984 connectionpool.py http://127.0.0.1:8080 "POST /comments/?text=first+post HTTP/1.1" 201 47
-2022-07-13 19:17:35 INFO 35984 test_comments.py {'id': 20, 'comment_text': 'first post', 'likes': 0}
-2022-07-13 19:17:35 INFO 35984 test_comments.py Updating the comment with comment id : 20
-2022-07-13 19:17:35 INFO 35984 comments.py update_comment
-2022-07-13 19:17:35 INFO 35984 utils.py build_request_headers
-2022-07-13 19:17:35 INFO 35984 utils.py Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json', 'Content-Type': 'application/json'}
-2022-07-13 19:17:35 INFO 35984 comments.py Request payload : {'comment_text': 'Updated to second one', 'likes': 700}
-2022-07-13 19:17:35 DEBUG 35984 connectionpool.py http://127.0.0.1:8080 "PUT /comments/20 HTTP/1.1" 200 60
-2022-07-13 19:17:35 INFO 35984 test_comments.py Response payload : {'id': 20, 'comment_text': 'Updated to second one', 'likes': 700}
-2022-07-13 19:17:35 DEBUG 35984 connectionpool.py Starting new HTTP connection (1): 127.0.0.1:8080
-2022-07-13 19:17:35 DEBUG 35984 connectionpool.py http://127.0.0.1:8080 "GET /health HTTP/1.1" 200 30
+2022-07-14 12:22:46 INFO 15880 conftest.py login_as_***()
+2022-07-14 12:22:46 DEBUG 15880 conftest.py Login payload: {'username': '***', 'password': '***'}
+2022-07-14 12:22:46 DEBUG 15880 connectionpool.py Starting new HTTP connection (1): 127.0.0.1:8080
+2022-07-14 12:22:47 DEBUG 15880 connectionpool.py http://127.0.0.1:8080 "POST /auth/login HTTP/1.1" 200 285
+2022-07-14 12:22:47 INFO 15880 test_comments.py test_get_all_comments
+2022-07-14 12:22:47 INFO 15880 comments.py get_all_comments
+2022-07-14 12:22:47 INFO 15880 utils.py build_request_headers
+2022-07-14 12:22:47 INFO 15880 utils.py Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json'}
+2022-07-14 12:22:47 DEBUG 15880 connectionpool.py http://127.0.0.1:8080 "GET /comments HTTP/1.1" 307 None
+2022-07-14 12:22:47 DEBUG 15880 connectionpool.py http://127.0.0.1:8080 "GET /comments/ HTTP/1.1" 200 1055
+2022-07-14 12:22:47 DEBUG 15880 test_comments.py [{'id': 1, 'comment_text': 'First Comment', 'likes': 0}, {'id': 2, 'comment_text': 'lastone', 'likes': 0}, {'id': 3, 'comment_text': 'first post', 'likes': 0}, {'id': 4, 'comment_text': 'first post', 'likes': 0}, {'id': 5, 'comment_text': 'Updated comment', 'likes': 123}, {'id': 6, 'comment_text': 'first post', 'likes': 0}, {'id': 7, 'comment_text': 'first post', 'likes': 0}, {'id': 8, 'comment_text': 'first post', 'likes': 0}, {'id': 9, 'comment_text': 'first post', 'likes': 0}, {'id': 10, 'comment_text': 'first post', 'likes': 0}, {'id': 11, 'comment_text': 'Updated comment', 'likes': 123}, {'id': 12, 'comment_text': 'first post', 'likes': 0}, {'id': 13, 'comment_text': 'first post', 'likes': 0}, {'id': 14, 'comment_text': 'first post', 'likes': 0}, {'id': 15, 'comment_text': 'first post', 'likes': 0}, {'id': 16, 'comment_text': 'first post', 'likes': 0}, {'id': 17, 'comment_text': 'first post', 'likes': 0}, {'id': 18, 'comment_text': 'New Comment2', 'likes': 0}, {'id': 19, 'comment_text': 'Updated to second one', 'likes': 700}, {'id': 20, 'comment_text': 'Updated to second one', 'likes': 700}, {'id': 21, 'comment_text': 'Updated to second one', 'likes': 700}]
+2022-07-14 12:22:47 INFO 15880 test_comments.py test_cud_comment
+2022-07-14 12:22:47 INFO 15880 test_comments.py Creating comment
+2022-07-14 12:22:47 INFO 15880 comments.py create_comment
+2022-07-14 12:22:47 INFO 15880 utils.py build_request_headers
+2022-07-14 12:22:47 INFO 15880 utils.py Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json'}
+2022-07-14 12:22:47 INFO 15880 comments.py Payload for the create request : {'text': 'first post'}
+2022-07-14 12:22:47 DEBUG 15880 connectionpool.py http://127.0.0.1:8080 "POST /comments/?text=first+post HTTP/1.1" 201 47
+2022-07-14 12:22:47 INFO 15880 test_comments.py {'id': 22, 'comment_text': 'first post', 'likes': 0}
+2022-07-14 12:22:47 INFO 15880 test_comments.py Updating the comment with comment id : 22
+2022-07-14 12:22:47 INFO 15880 comments.py update_comment
+2022-07-14 12:22:47 INFO 15880 utils.py build_request_headers
+2022-07-14 12:22:47 INFO 15880 utils.py Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json', 'Content-Type': 'application/json'}
+2022-07-14 12:22:47 INFO 15880 comments.py Request payload : {'comment_text': 'Updated to second one', 'likes': 700}
+2022-07-14 12:22:47 DEBUG 15880 connectionpool.py http://127.0.0.1:8080 "PUT /comments/22 HTTP/1.1" 200 60
+2022-07-14 12:22:47 INFO 15880 test_comments.py Response payload : {'id': 22, 'comment_text': 'Updated to second one', 'likes': 700}
+2022-07-14 12:22:47 INFO 15880 test_comments.py Deleting the comment - 22
+2022-07-14 12:22:47 INFO 15880 comments.py delete_comment
+2022-07-14 12:22:47 INFO 15880 utils.py build_request_headers
+2022-07-14 12:22:47 INFO 15880 utils.py Request Header : {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80', 'Accept': 'application/json'}
+2022-07-14 12:22:47 DEBUG 15880 connectionpool.py http://127.0.0.1:8080 "DELETE /comments/22 HTTP/1.1" 200 31
+2022-07-14 12:22:47 INFO 15880 test_comments.py Delete comment : {'detail': 'Deleted comment 22'}
+2022-07-14 12:22:47 DEBUG 15880 connectionpool.py Starting new HTTP connection (1): 127.0.0.1:8080
+2022-07-14 12:22:47 DEBUG 15880 connectionpool.py http://127.0.0.1:8080 "GET /health HTTP/1.1" 200 30
