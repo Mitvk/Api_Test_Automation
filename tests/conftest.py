@@ -1,5 +1,4 @@
 import pytest
-import requests
 from config import SESSION, APP_URL, ADMIN_USER, ADMIN_PASSWORD, LOG
 
 @pytest.fixture(scope='session')

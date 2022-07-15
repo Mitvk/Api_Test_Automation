@@ -1,6 +1,6 @@
-import pytest
-import requests
-from lib_.utils import build_request_headers
+# import pytest
+# import requests
+# from lib_.utils import build_request_headers
 from lib_.comments import Comments
 from config import APP_URL, LOG
 

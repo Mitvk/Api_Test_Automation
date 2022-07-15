@@ -429,7 +429,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 14-Jul-2022 at 12:22:47 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 15-Jul-2022 at 10:31:53 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -445,8 +445,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.10.1</td></tr></table>
     <h2>Summary</h2>
-    <p>3 tests ran in 5.25 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>4 tests ran in 5.95 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -460,12 +460,24 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/comments/test_comments.py::test_get_all_comments</td>
-          <td class="col-duration">0.31</td>
+          <td class="col-name">tests/auth/test_login.py::test_login</td>
+          <td class="col-duration">0.43</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:conftest.py:7 login_as_***()<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_comments.py:11 test_get_all_comments
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:6 test_login
+INFO     root:auth.py:10 login
+INFO     root:auth.py:14 Request payload : {&#x27;username&#x27;: &#x27;***&#x27;, &#x27;password&#x27;: &#x27;***&#x27;}
+INFO     root:test_login.py:8 {&#x27;access_token&#x27;: &#x27;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80&#x27;, &#x27;token_type&#x27;: &#x27;Bearer&#x27;}<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/comments/test_comments.py::test_get_all_comments</td>
+          <td class="col-duration">0.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:conftest.py:6 login_as_***()<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_comments.py:11 test_get_all_comments
 INFO     root:comments.py:11 get_all_comments
 INFO     root:utils.py:4 build_request_headers
 INFO     root:utils.py:12 Request Header : {&#x27;Authorization&#x27;: &#x27;Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80&#x27;, &#x27;Accept&#x27;: &#x27;application/json&#x27;}<br/></div></td></tr></tbody>
@@ -483,23 +495,23 @@ INFO     root:comments.py:17 create_comment
 INFO     root:utils.py:4 build_request_headers
 INFO     root:utils.py:12 Request Header : {&#x27;Authorization&#x27;: &#x27;Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80&#x27;, &#x27;Accept&#x27;: &#x27;application/json&#x27;}
 INFO     root:comments.py:20 Payload for the create request : {&#x27;text&#x27;: &#x27;first post&#x27;}
-INFO     root:test_comments.py:24 {&#x27;id&#x27;: 22, &#x27;comment_text&#x27;: &#x27;first post&#x27;, &#x27;likes&#x27;: 0}
-INFO     root:test_comments.py:27 Updating the comment with comment id : 22
+INFO     root:test_comments.py:24 {&#x27;id&#x27;: 32, &#x27;comment_text&#x27;: &#x27;first post&#x27;, &#x27;likes&#x27;: 0}
+INFO     root:test_comments.py:27 Updating the comment with comment id : 32
 INFO     root:comments.py:25 update_comment
 INFO     root:utils.py:4 build_request_headers
 INFO     root:utils.py:12 Request Header : {&#x27;Authorization&#x27;: &#x27;Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80&#x27;, &#x27;Accept&#x27;: &#x27;application/json&#x27;, &#x27;Content-Type&#x27;: &#x27;application/json&#x27;}
 INFO     root:comments.py:33 Request payload : {&#x27;comment_text&#x27;: &#x27;Updated to second one&#x27;, &#x27;likes&#x27;: 700}
-INFO     root:test_comments.py:31 Response payload : {&#x27;id&#x27;: 22, &#x27;comment_text&#x27;: &#x27;Updated to second one&#x27;, &#x27;likes&#x27;: 700}
-INFO     root:test_comments.py:35 Deleting the comment - 22
+INFO     root:test_comments.py:31 Response payload : {&#x27;id&#x27;: 32, &#x27;comment_text&#x27;: &#x27;Updated to second one&#x27;, &#x27;likes&#x27;: 700}
+INFO     root:test_comments.py:35 Deleting the comment - 32
 INFO     root:comments.py:38 delete_comment
 INFO     root:utils.py:4 build_request_headers
 INFO     root:utils.py:12 Request Header : {&#x27;Authorization&#x27;: &#x27;Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTIkQS9vRVBVNU5lc3hjM3ozbXJQcTg5dTM4N3RoMy5wOTRsb2trcFd6NS5Ba0ZTWmtpSFV6SUciLCJyb2xlcyI6ImFkbWluIn0.lc0oKbSZSIqTMSgIGy9uwFG-J4tWJVf4bDGU35eic80&#x27;, &#x27;Accept&#x27;: &#x27;application/json&#x27;}
-INFO     root:test_comments.py:39 Delete comment : {&#x27;detail&#x27;: &#x27;Deleted comment 22&#x27;}<br/></div></td></tr></tbody>
+INFO     root:test_comments.py:39 Delete comment : {&#x27;detail&#x27;: &#x27;Deleted comment 32&#x27;}<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/health/test_health.py::test_health</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
